@@ -5,7 +5,7 @@ class FunctionalSpec extends WordSpec with Matchers {
   "functional adder" should {
     "add" in {
 
-      import Converters._
+      import AdderConverters._
 
       var b = 1
       var a = new FunctionalAdder(1)
@@ -17,7 +17,7 @@ class FunctionalSpec extends WordSpec with Matchers {
   }
 }
 
-object Converters {
+object AdderConverters {
   implicit def converter(f: FunctionalAdder):Int = {
     f.total
   }
